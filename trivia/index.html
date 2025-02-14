@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+
+            // Part 1 ................................................................................
+
+            function p1i1()
+            {
+                document.getElementById('q1_status').innerHTML = "incorrect";
+                document.getElementById('item_1').style.backgroundColor = "red";
+            }
+
+            function p1i2()
+            {
+                document.getElementById('q1_status').innerHTML = "incorrect";
+                document.getElementById('item_2').style.backgroundColor = "red";
+            }
+
+            function p1i3()
+            {
+                document.getElementById('q1_status').innerHTML = "correct!";
+                document.getElementById('item_3').style.backgroundColor = "lightgreen";
+            }
+
+            function p1i4()
+            {
+                document.getElementById('q1_status').innerHTML = "incorrect";
+                document.getElementById('item_4').style.backgroundColor = "red";
+            }
+
+
+
+            // Part 2 ...............................................................................
+
+
+
+
+            function Check_answer()
+            {
+                let answer = document.getElementById("Answer").value;
+
+
+                if(answer == null)
+                {
+                    document.getElementById('Answer').style.backgroundColor = "white";
+
+                }
+                else if(answer == "China")
+                {
+                    document.getElementById('Answer').style.backgroundColor = "lightgreen";
+                    document.getElementById('q2_status').innerHTML = "correct!";
+                }
+                else
+                {
+                    document.getElementById('Answer').style.backgroundColor = "red";
+                    document.getElementById('q2_status').innerHTML = "incorrect";
+                }
+
+
+
+            }
+
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+
+                <!-- TODO: Add multiple choice question here -->
+
+                    <h3>What Color is The Sky ?</h3>
+                    <p id="q1_status"></p>
+
+                    <button id="item_1" type="button" onclick="p1i1(); return false;">Red</button>
+                    <button id="item_2" type="button" onclick="p1i2(); return false;">Green</button>
+                    <button id="item_3" type="button" onclick="p1i3(); return false;">Blue</button>
+                    <button id="item_4" type="button" onclick="p1i4(); return false;">Yellow</button>
+
+
+
+
+
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+
+                <!-- TODO: Add free response question here -->
+
+                <form onsubmit="Check_answer(); return false;">
+                    <h3>What is The name of The most Populous Country in The World ?</h3>
+                    <p id="q2_status"></p>
+
+                    <input type="text" id="Answer">
+
+                    <input type="submit" text="Say Hello">
+                </form>
+
+
+
+
+            </div>
+        </div>
+    </body>
+</html>
