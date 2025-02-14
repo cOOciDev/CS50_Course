@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <form action="/quote" method="post" class="form-group">
+        <input type="text" name="symbol" outofocus placeholder="Company Symbol" autocomplete="off" class="form-control" required>
+        <button type="submit" id="quote" class="btn btn-primary">Quote</button>
+    </form>
+{% endblock %}
