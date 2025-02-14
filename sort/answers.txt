@@ -1,0 +1,11 @@
+sort1 uses: swlwction sort
+
+How do you know?: because sort1 is slowish.
+
+sort2 uses: Merge sort
+
+How do you know?: because sort2 is fastest.
+
+sort3 uses: Bubble sort
+
+How do you know?: because sort3 is faster than sort1 and lower sort2.
